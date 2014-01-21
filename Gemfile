@@ -8,10 +8,12 @@ gem 'bcrypt-ruby', '3.1.2'
 gem 'faker', '1.1.2'
 gem 'will_paginate', '3.0.4'
 gem 'bootstrap-will_paginate', '0.0.9'
-gem 'pg'
+
 
 group :development, :test do
 	gem 'rspec-rails', '2.13.1'
+	gem 'guard-rspec'
+	gem 'sqlite3'
 	# The following optional lines are part of the advanced setup.
 	# gem 'guard-rspec', '2.5.0'
 	# gem 'spork-rails', '4.0.0'
@@ -25,7 +27,9 @@ group :test do
 	gem 'factory_girl_rails', '4.2.0'
 	gem 'cucumber-rails', '1.4.0', :require => false
 	gem 'database_cleaner', github: 'bmabey/database_cleaner'
-
+	gem 'spork-rails'
+	gem 'guard-spork'
+	gem 'childprocess'
 	# Uncomment this line on OS X.
 	# gem 'growl', '1.0.3'
 
@@ -50,6 +54,6 @@ group :doc do
 end
 
 group :production do
-
+	gem 'pg'
 	gem 'rails_12factor', '0.0.2'
 end
