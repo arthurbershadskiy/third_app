@@ -48,7 +48,7 @@ describe User do
   end
   describe "when email address is already taken" do
 	  before do
-		  user_with_same_email = @user.dup
+		  user_with_same_email = @user
 		  user_with_same_email.save
 	  end
 
